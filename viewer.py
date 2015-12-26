@@ -26,11 +26,17 @@ def disp_host(mac):
 		r = c.fetchall()
 		if r:
 			hn = r[0][0]
+	os = None
+	c.execute("SELECT os FROM opsys WHERE mac=?",(mac,))
+	r = c.fetchall()
+	if r:
+		os = r[0][0]
 	print '-='*30 + '-'
 	print "mac:",util.pprint_mac(mac)
 	print "manuf:",manuf
 	print "ip:",ip
 	print "hostname:",hn
+	print "os:",os
 
 
 def disp_all():

@@ -9,7 +9,7 @@ for i in config.ANALYZE:
 	try:
 		exec "from analyzers.{} import a_layers,a_analyze".format(i)
 		analyzers.append((a_layers,a_analyze))
-	except KeyboardInterrupt:
+	except:
 		print "error loading analyzer:",i
 
 
