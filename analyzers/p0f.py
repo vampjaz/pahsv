@@ -30,6 +30,7 @@ def a_analyze(pkt):
 		conn = sqlite3.connect(DB)
 		c = conn.cursor()
 		c.execute("SELECT * FROM opsys WHERE mac=?",(mac,))
-		c.execute("INSERT INTO opsys VALUES (?,?)",(mac,os))
+		if not c.fetchone():
+			c.execute("INSERT INTO opsys VALUES (?,?)",(mac,os))
 		conn.commit()
 		conn.close()
