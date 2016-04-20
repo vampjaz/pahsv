@@ -14,6 +14,7 @@ This was written as an exercise, and I am already beginning to feel the limitati
 
 - Python 2.7
 - Scapy
+- p0f 2.x (scapy doesn't support 3.x for some reason)
 
 Before running for the first time, you need to build the database of mac address vendors:
 

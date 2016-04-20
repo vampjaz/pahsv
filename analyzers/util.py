@@ -8,4 +8,4 @@ def pprint_mac(mac):
 		r += mac[:2]
 		r += ':'
 		mac = mac[2:]
-	return r.lower()
+	return r.lower()[:-1]

@@ -31,6 +31,8 @@ def disp_host(mac):
 	r = c.fetchall()
 	if r:
 		os = r[0][0]
+	if not hn:
+		return
 	print '-='*30 + '-'
 	print "mac:",util.pprint_mac(mac)
 	print "manuf:",manuf
